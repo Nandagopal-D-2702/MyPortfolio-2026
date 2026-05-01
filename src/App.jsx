@@ -2,6 +2,7 @@ import Button from './components/ui/Button'
 import Badge from './components/ui/Badge'
 import Card from './components/ui/Card'
 import { Heading, Label, Text } from './components/ui/Typography'
+import Divider from './components/ui/Divider'
 
 function App() {
   return (
@@ -313,19 +314,138 @@ function App() {
               Analytics Dashboard Platform
             </Heading>
             <Text>
-              A production SaaS product built with React, Node.js and PostgreSQL. features real-time data visualisation and role-based access control.
+              A production SaaS product built with React, Node.js and
+              PostgreSQL. features real-time data visualisation and role-based
+              access control.
             </Text>
           </Card.Body>
           <Card.Footer>
-            <div style={{display:'flex', gap:'var(--space-2)'}}>
-              <Badge variant='outline'>React</Badge>
-              <Badge variant='outline'>Node.js</Badge>
-              <Badge variant='outline'>PostgreSQL</Badge>
+            <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+              <Badge variant="outline">React</Badge>
+              <Badge variant="outline">Node.js</Badge>
+              <Badge variant="outline">PostgreSQL</Badge>
             </div>
-            <Button variant='ghost' size='sm'>View Project</Button>
+            <Button variant="ghost" size="sm">
+              View Project
+            </Button>
           </Card.Footer>
         </Card>
       </div>
+
+      <Label accent>Divider - variants</Label>
+
+      {/* Plain */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          Default (solid)
+        </Text>
+        <Divider />
+      </div>
+
+      {/* Dashed */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          Dashed
+        </Text>
+        <Divider variant="dashed" />
+      </div>
+
+      {/* Gradient */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          Gradient
+        </Text>
+        <Divider variant="gradient" />
+      </div>
+
+      {/* accent gradient */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          Gradient + accent
+        </Text>
+        <Divider variant="gradient" accent />
+      </div>
+
+      {/* With label */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          With label
+        </Text>
+        <Divider label="Featured Work" />
+      </div>
+
+      {/* With label */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          With accent label
+        </Text>
+        <Divider label="2025" accent />
+      </div>
+
+      {/* With label */}
+      <div>
+        <Text size="sm" muted style={{ marginBottom: 'var(--space-3)' }}>
+          Vertical (inside flex row)
+        </Text>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'var(--space-6)',
+            height: '48px',
+          }}
+        >
+          <Text size="sm">Projects</Text>
+          <Divider orientation="vertical" />
+          <Text size="sm">Blog</Text>
+          <Divider orientation="vertical" />
+          <Text size="sm">Vlogs</Text>
+        </div>
+      </div>
+
+      {/* All components together - real portfolio section */}
+      <Divider label="Component Library Complete" accent />
+
+      <Card>
+        <Card.Header>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--space-3)',
+            }}
+          >
+            <Badge variant="subtle" dot>
+              Available to work
+            </Badge>
+          </div>
+          <Badge variant="outline">2025</Badge>
+        </Card.Header>
+        <Card.Body>
+          <Label
+            accent
+            style={{ display: 'block', marginBottom: 'var(--space-3)' }}
+          >
+            Phase 3 - Complete
+          </Label>
+          <Heading as='h2' size='2xl' style={{marginBottom: 'var(--space-3)'}}>
+            Your component library is ready.
+          </Heading>
+          <Text>
+            Button, Badge, Card, Typography and Divider - all built from scratch, all production grade, all yours to use across every page of the portfolio.
+          </Text>
+        </Card.Body>
+        <Card.Footer>
+          <div style={{display: 'flex', gap: 'var(--space-2)'}}>
+            <Badge variant='outline'>React</Badge>
+            <Badge variant='outline'>Tailwind</Badge>
+            <Badge variant='outline'>CSS Tokens</Badge>
+          </div>
+          <Button variant='primary' size='sm'>
+            Start Phase 4
+          </Button>
+        </Card.Footer>
+      </Card>
     </div>
   )
 }
