@@ -1,6 +1,7 @@
 import Button from './components/ui/Button'
 import Badge from './components/ui/Badge'
 import Card from './components/ui/Card'
+import { Heading, Label, Text } from './components/ui/Typography'
 
 function App() {
   return (
@@ -188,13 +189,141 @@ function App() {
 
       {/* Hoverable card */}
       <div>
-        <p className='label-accent' style={{marginBottom: 'var(--space-4)'}}>
+        <p className="label-accent" style={{ marginBottom: 'var(--space-4)' }}>
           Card - hoverable (hover over it)
         </p>
         <Card hoverable onClick={() => alert('Card clicked!')}>
           <Card.Body>
-              <p>This card lifts on hover and is clickable. Used for project grid items.</p>
+            <p>
+              This card lifts on hover and is clickable. Used for project grid
+              items.
+            </p>
           </Card.Body>
+        </Card>
+      </div>
+
+      {/* Heading Sizes */}
+      <div>
+        <Label
+          accent
+          style={{ marginBottom: 'var(--space-4)', display: 'block' }}
+        >
+          Heading - Sizes
+        </Label>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'var(--space-3)',
+          }}
+        >
+          <Heading as="h1" size="5xl">
+            Heading 5xl
+          </Heading>
+          <Heading as="h2" size="3xl">
+            Heading 3xl
+          </Heading>
+          <Heading as="h3" size="2xl">
+            Heading 2xl
+          </Heading>
+          <Heading as="h4" size="xl">
+            Heading xl
+          </Heading>
+          <Heading as="h5" size="lg">
+            Heading lg
+          </Heading>
+        </div>
+      </div>
+
+      {/* Italic Heading */}
+      <div>
+        <Label
+          accent
+          style={{ marginBottom: 'var(--space-4)', display: 'block' }}
+        >
+          Heading - italic (used in hero)
+        </Label>
+        <Heading as="h2" size="4xl">
+          I build things{' '}
+          <Heading
+            as="span"
+            size="4xl"
+            italic
+            style={{ color: 'var(--color-accent)' }}
+          >
+            people remember.
+          </Heading>
+        </Heading>
+      </div>
+
+      {/* Text variants */}
+      <div>
+        <Label
+          accent
+          style={{ marginBottom: 'var(--space-4)', display: 'block' }}
+        >
+          Text - variants
+        </Label>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'var(--space-3)',
+          }}
+        >
+          <Text size="lg">Large body text - used for hero descriptions</Text>
+          <Text size="base">
+            Base body text - the default for all paragraphs
+          </Text>
+          <Text size="sm">
+            Small text - used for captions and supporting copy
+          </Text>
+          <Text size="sm">
+            Muted small text - dates, metadata, secondary info
+          </Text>
+        </div>
+      </div>
+
+      {/* Everything together - real card */}
+
+      <div>
+        <Label
+          accent
+          style={{ marginBottom: 'var(--space-4)', display: 'block' }}
+        >
+          All components together
+        </Label>
+        <Card hoverable>
+          <Card.Header>
+            <Badge variant="subtle">Case Study</Badge>
+            <Badge variant="accent">Live</Badge>
+          </Card.Header>
+          <Card.Body>
+            <Label
+              accent
+              style={{ marginBottom: 'var(--space-3)', display: 'block' }}
+            >
+              Featured Project - 2024
+            </Label>
+            <Heading
+              as="h3"
+              size="2xl"
+              style={{ marginBottom: 'var(--space-3)' }}
+            >
+              Analytics Dashboard Platform
+            </Heading>
+            <Text>
+              A production SaaS product built with React, Node.js and PostgreSQL. features real-time data visualisation and role-based access control.
+            </Text>
+          </Card.Body>
+          <Card.Footer>
+            <div style={{display:'flex', gap:'var(--space-2)'}}>
+              <Badge variant='outline'>React</Badge>
+              <Badge variant='outline'>Node.js</Badge>
+              <Badge variant='outline'>PostgreSQL</Badge>
+            </div>
+            <Button variant='ghost' size='sm'>View Project</Button>
+          </Card.Footer>
         </Card>
       </div>
     </div>
