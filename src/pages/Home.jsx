@@ -1,7 +1,9 @@
+import Hero from "../features/hero/Hero"
+
 function Home(){
     return(
         <main>
-            <p className="label-accent">Home page</p>
+            <Hero/>
         </main>
     )
 }

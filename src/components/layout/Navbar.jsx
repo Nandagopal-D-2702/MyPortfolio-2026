@@ -56,12 +56,12 @@ function Navbar() {
               letterSpacing: '-0.01em',
             }}
           >
-            YN.
+            ND.
           </span>
         </NavLink>
 
         {/* Center links */}
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
@@ -85,14 +85,15 @@ function Navbar() {
         </div>
 
         {/* Right side - availability + CTA */}
-        <div style={{display:'flex', alignItems:'center', gap:'var(--space-4)'}}>
-            <Badge variant='subtle'>Available</Badge>
-            <Button variant='primary' size='sm'>Hire Me</Button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <Badge variant="subtle">Available</Badge>
+          <Button variant="primary" size="sm">
+            Hire Me
+          </Button>
         </div>
       </nav>
     </header>
   )
 }
-
 
 export default Navbar
