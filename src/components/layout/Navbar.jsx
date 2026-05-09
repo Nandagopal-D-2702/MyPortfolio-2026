@@ -28,7 +28,7 @@ function Navbar() {
         left: 0,
         right: 0,
         zIndex: 'var(--z-nav)',
-        background: 'rgba(250,250,247,0.85',
+        background: 'rgba(250,250,247,0.85)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         borderBottom: '0.5px solid var(--color-border)',

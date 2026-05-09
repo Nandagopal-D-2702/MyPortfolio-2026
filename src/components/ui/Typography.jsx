@@ -41,14 +41,14 @@ const TEXT_SIZES = {
 
 function Heading({
   children,
-  as: Element = 'h2',
+  as: Tag = 'h2',
   size = '2xl',
   italic = false,
   className = '',
   style = {},
 }) {
   return (
-    <Element
+    <Tag
       className={className}
       style={{
         fontFamily: 'var(--font-serif)',
@@ -62,7 +62,7 @@ function Heading({
       }}
     >
       {children}
-    </Element>
+    </Tag>
   )
 }
 
@@ -126,7 +126,7 @@ function Label({ children, accent = false, className = '', style = {} }) {
 //   <Typography.Heading>...</Typography.Heading>
 // ------------------------------------------------------------
 
-const Typography = { Heading, Text, Label }
+// const Typography = { Heading, Text, Label }
 
 export { Heading, Text, Label }
-export default Typography
+export default { Heading, Text, Label }
