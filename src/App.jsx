@@ -4,6 +4,7 @@ import Home from '@/pages/Home'
 import Projects from '@/pages/Projects'
 import Blog from '@/pages/Blog'
 import Vlogs from '@/pages/Vlogs'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/vlogs" element={<Vlogs />} />
         </Routes>
       </div>
+      <Footer />
     </>
   )
 }
