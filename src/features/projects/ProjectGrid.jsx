@@ -5,11 +5,13 @@
 // ============================================================
 
 import { PROJECTS } from '@/lib/data'
+import { motion } from 'framer-motion'
 import { Heading, Text, Label } from '../../components/ui/Typography'
 import Badge from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
 import Divider from '../../components/ui/Divider'
 import Card from '../../components/ui/Card'
+import { fadeUp, container, item, scaleUp } from '../../lib/animations'
 
 function ProjectGrid() {
   const featured = PROJECTS.find((p) => p.featured)
@@ -18,7 +20,11 @@ function ProjectGrid() {
   return (
     <section style={{ padding: '64px 48px' }}>
       {/* Section header */}
-      <div
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -45,107 +51,125 @@ function ProjectGrid() {
         <Button variant="outline" size="sm">
           View all work
         </Button>
-      </div>
+      </motion.div>
 
       <Divider style={{ marginBottom: '48px' }} />
 
       {/* Featured project - full width */}
       {featured && (
-        <Card variant="dark" hoverable style={{ marginBottom: '16px' }}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              minHeight: '280px',
-            }}
-          >
-            {/* Left - info */}
+        <motion.div
+          variants={scaleUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <Card variant="dark" hoverable style={{ marginBottom: '16px' }}>
             <div
               style={{
-                padding: '40px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                borderRight: '0.5px solid rgba(250,250,247,0.06)',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                minHeight: '280px',
               }}
             >
-              <div>
-                <div
-                  style={{ display: 'flex', gap: '8px', marginBottom: '20px' }}
-                >
-                  <Badge variant="subtle">{featured.category}</Badge>
-                  {featured.live && (
-                    <Badge variant="accent" dot>
-                      Live
-                    </Badge>
-                  )}
-                </div>
-                <Heading
-                  as="h3"
-                  size="3xl"
-                  style={{ color: '#FAFAF7', marginBottom: '16px' }}
-                >
-                  {featured.title}
-                </Heading>
-                <Text
-                  style={{ color: 'rgba(250,250,247,0.5)', maxWidth: '320px' }}
-                >
-                  {featured.description}
-                </Text>
-              </div>
-
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <Button variant="primary" size="sm">
-                  View Project
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  style={{ color: 'rgba(250,250,247,0.5)' }}
-                >
-                  Github
-                </Button>
-              </div>
-            </div>
-
-            {/* Right - tech + year */}
-            <div
-              style={{
-                padding: '40px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
-              <Label style={{ color: 'rgba(250,250,247,0.2)' }}>
-                Tech Stack
-              </Label>
-              <div>
-                {featured.tech.map((t) => (
+              {/* Left - info */}
+              <div
+                style={{
+                  padding: '40px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  borderRight: '0.5px solid rgba(250,250,247,0.06)',
+                }}
+              >
+                <div>
                   <div
-                    key={t}
                     style={{
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '13px',
-                      color: 'rgba(250,250,247,0.5)',
-                      padding: '10px 0',
-                      borderBottom: '0.5px solid rgba(250,250,247,0.06)',
+                      display: 'flex',
+                      gap: '8px',
+                      marginBottom: '20px',
                     }}
                   >
-                    {t}
+                    <Badge variant="subtle">{featured.category}</Badge>
+                    {featured.live && (
+                      <Badge variant="accent" dot>
+                        Live
+                      </Badge>
+                    )}
                   </div>
-                ))}
+                  <Heading
+                    as="h3"
+                    size="3xl"
+                    style={{ color: '#FAFAF7', marginBottom: '16px' }}
+                  >
+                    {featured.title}
+                  </Heading>
+                  <Text
+                    style={{
+                      color: 'rgba(250,250,247,0.5)',
+                      maxWidth: '320px',
+                    }}
+                  >
+                    {featured.description}
+                  </Text>
+                </div>
+
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <Button variant="primary" size="sm">
+                    View Project
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    style={{ color: 'rgba(250,250,247,0.5)' }}
+                  >
+                    Github
+                  </Button>
+                </div>
               </div>
-              <Label style={{ color: 'rgba(250,250,247,0.2)' }}>
-                {featured.year}
-              </Label>
+
+              {/* Right - tech + year */}
+              <div
+                style={{
+                  padding: '40px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Label style={{ color: 'rgba(250,250,247,0.2)' }}>
+                  Tech Stack
+                </Label>
+                <div>
+                  {featured.tech.map((t) => (
+                    <div
+                      key={t}
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '13px',
+                        color: 'rgba(250,250,247,0.5)',
+                        padding: '10px 0',
+                        borderBottom: '0.5px solid rgba(250,250,247,0.06)',
+                      }}
+                    >
+                      {t}
+                    </div>
+                  ))}
+                </div>
+                <Label style={{ color: 'rgba(250,250,247,0.2)' }}>
+                  {featured.year}
+                </Label>
+              </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </motion.div>
       )}
 
       {/* Rest of projects - 3 column grid */}
-      <div
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
@@ -156,7 +180,7 @@ function ProjectGrid() {
         {rest.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

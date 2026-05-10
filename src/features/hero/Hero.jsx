@@ -5,10 +5,19 @@
 // ============================================================
 
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import Button from '../../components/ui/Button'
 import Badge from '../../components/ui/Badge'
 import { Heading, Text, Label } from '../../components/ui/Typography'
 import Divider from '../../components/ui/Divider'
+import {
+  fadeUp,
+  fadeIn,
+  slideInLeft,
+  slideInRight,
+  container,
+  item,
+} from '../../lib/animations'
 
 // -- DATA ----------------------------------------------------
 // Keeping data separate from JSX is a good habit.
@@ -46,7 +55,10 @@ function Hero() {
         }}
       >
         {/* LEFT COLUMN */}
-        <div
+        <motion.div
+          variant={slideInLeft}
+          initial="hidden"
+          animate="show"
           style={{
             padding: '56px 48px',
             display: 'flex',
@@ -57,7 +69,10 @@ function Hero() {
         >
           {/* Top - eyebrow + headline */}
           <div>
-            <div
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -73,18 +88,38 @@ function Hero() {
                 }}
               />
               <Label accent>Portfolio - 2026</Label>
-            </div>
+            </motion.div>
 
-            <Heading as="h1" size="5xl" style={{ marginBottom: '16px' }}>
-              I write <br />
-              code & <Heading as='span' size='5xl' italic style={{color:'var(--color-accent)'}}>tell</Heading>
-              <br />
-              stories.
-            </Heading>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              transition={{ delay: 0.15 }}
+            >
+              <Heading as="h1" size="5xl" style={{ marginBottom: '16px' }}>
+                I write <br />
+                code &{' '}
+                <Heading
+                  as="span"
+                  size="5xl"
+                  italic
+                  style={{ color: 'var(--color-accent)' }}
+                >
+                  tell
+                </Heading>
+                <br />
+                stories.
+              </Heading>
+            </motion.div>
           </div>
 
           {/* Bottom - description + CTAs */}
-          <div>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            transition={{ delay: 0.3 }}
+          >
             <Text
               size="base"
               style={{ marginBottom: '28px', maxWidth: '340px' }}
@@ -105,11 +140,16 @@ function Hero() {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT COLUMN */}
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <motion.div
+          variants={slideInRight}
+          initial="hidden"
+          animate="show"
+          style={{ display: 'flex', flexDirection: 'column' }}
+        >
           {/* Featured project card - dark */}
           <div
             style={{
@@ -195,13 +235,17 @@ function Hero() {
             </div>
           </div>
 
-          {/* Stats row */}
-          <div
+          {/* Stats row with stagger*/}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
             style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}
           >
             {STATS.map((stat, index) => (
-              <div
+              <motion.div
                 key={stat.label}
+                variants={item}
                 style={{
                   padding: '20px 24px',
                   borderRight:
@@ -224,10 +268,10 @@ function Hero() {
                   {stat.num}
                 </div>
                 <Label>{stat.label}</Label>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* ---- TICKER TAPE ------------------------------------- */}
