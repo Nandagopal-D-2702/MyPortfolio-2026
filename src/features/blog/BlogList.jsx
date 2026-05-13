@@ -6,12 +6,14 @@
 
 import { useState } from 'react'
 import { BLOG_POSTS } from '@/lib/data'
+import { motion } from 'framer-motion'
 import { Heading, Text, Label } from '@/components/ui/Typography'
 import Badge from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
 import Divider from '../../components/ui/Divider'
 import Card from '../../components/ui/Card'
 import Blog from '../../pages/Blog'
+import { fadeUp, container, item } from '@/lib/animations'
 
 // -- CATEGORIES ----------------------------------------------
 // Derived from data — not hardcoded.
@@ -51,7 +53,11 @@ function BlogList() {
   return (
     <section style={{ padding: '64px 48px' }}>
       {/* Section Header */}
-      <div
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -73,7 +79,7 @@ function BlogList() {
         <Button variant="outline" size="sm">
           View all posts
         </Button>
-      </div>
+      </motion.div>
 
       {/* Category filters */}
       <div
@@ -121,7 +127,11 @@ function BlogList() {
       <Divider style={{ marginBottom: '40px' }} />
 
       {/* Blog posts grid */}
-      <div
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true , amount: 0.1}}
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
@@ -129,9 +139,11 @@ function BlogList() {
         }}
       >
         {filtered.map((post) => (
-          <BlogCard key={post.id} post={post} />
+          <motion.div key={post.id} variants={item}>
+            <BlogCard post={post} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Empty state */}
       {filtered.length === 0 && (
@@ -162,19 +174,25 @@ function BlogCard({ post }) {
           <Label>{post.readTime}</Label>
         </div>
 
-        <Heading as='h3' size='xl' style={{marginBottom: '10px'}}>
-            {post.title}
+        <Heading as="h3" size="xl" style={{ marginBottom: '10px' }}>
+          {post.title}
         </Heading>
 
-        <Text size='sm' style={{marginBottom: '20px'}}>
-            {post.excerpt}
+        <Text size="sm" style={{ marginBottom: '20px' }}>
+          {post.excerpt}
         </Text>
 
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
-            <Label>{post.date}</Label>
-            <Button variant='ghost' size='sm'>
-                Read →
-            </Button>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <Label>{post.date}</Label>
+          <Button variant="ghost" size="sm">
+            Read →
+          </Button>
         </div>
       </Card.Body>
     </Card>

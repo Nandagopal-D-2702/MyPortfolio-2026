@@ -9,6 +9,8 @@ import Badge from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
 import Divider from '../../components/ui/Divider'
 
+
+
 // -- THUMBNAIL BACKGROUNDS -----------------------------------
 // Each vlog gets a unique dark gradient as placeholder
 // until real thumbnails are added.
