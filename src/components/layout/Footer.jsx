@@ -87,7 +87,7 @@ function Footer() {
               paddingBottom: '2px',
             }}
           >
-            your@email.com
+            Nandugopaldevraj.2702@gmail.com
           </a>
         </div>
 

@@ -4,12 +4,12 @@
 // ============================================================
 
 import { VLOGS } from '../../lib/data'
+import { motion } from 'framer-motion'
 import { Heading, Text, Label } from '../../components/ui/Typography'
 import Badge from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
 import Divider from '../../components/ui/Divider'
-
-
+import { fadeUp, container, item } from '../../lib/animations'
 
 // -- THUMBNAIL BACKGROUNDS -----------------------------------
 // Each vlog gets a unique dark gradient as placeholder
@@ -29,7 +29,11 @@ function VlogGallery() {
 
   return (
     <section style={{ padding: '64px 48px' }}>
-      <div
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -56,13 +60,17 @@ function VlogGallery() {
         <Button variant="outline" size="sm">
           Watch all
         </Button>
-      </div>
+      </motion.div>
 
       <Divider style={{ marginBottom: '48px' }} />
 
       {/* Featured vlog - Large */}
       {featured && (
-        <div
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
           style={{
             marginBottom: '16px',
             borderRadius: '4px',
@@ -129,7 +137,7 @@ function VlogGallery() {
               </Button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* Rest - 3 column grid */}
