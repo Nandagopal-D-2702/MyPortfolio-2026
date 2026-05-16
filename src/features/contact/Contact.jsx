@@ -18,6 +18,7 @@ const SOCIAL_LINKS = [
 ]
 
 const EMAIL = 'nandugopaldevraj.2702@gmail.com'
+const GMAIL_URL = `https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=Hello — Let's work together`
 
 function Contact() {
   return (
@@ -79,7 +80,8 @@ function Contact() {
             Preferred contact
           </Label>
           <a
-            href={`mailto:${EMAIL}`}
+            href={GMAIL_URL}
+            target='_blank'
             style={{
               display: 'block',
               fontFamily: 'var(--font-serif)',
@@ -103,7 +105,7 @@ function Contact() {
             {EMAIL}
           </a>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <a href={`mailto:${EMAIL}`} style={{ textDecoration: 'none' }}>
+            <a href={GMAIL_URL} target='_blank' style={{ textDecoration: 'none' }}>
               <Button variant="primary" size="md">
                 Send Email
               </Button>
