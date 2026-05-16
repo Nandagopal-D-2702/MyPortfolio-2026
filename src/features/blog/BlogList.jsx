@@ -118,7 +118,7 @@ function BlogList() {
                   ? 'var(--color-text-primary)'
                   : 'var(--color-border)',
               appearance: 'none',
-              WebkitAppearance: 'none'
+              WebkitAppearance: 'none',
             }}
           >
             {category}
@@ -132,8 +132,8 @@ function BlogList() {
       <motion.div
         variants={container}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true , amount: 0.1}}
+        animate="show"
+        key={activeFilter}
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
