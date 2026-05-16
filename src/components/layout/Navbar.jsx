@@ -87,6 +87,11 @@ function Navbar() {
         {/* Right side - availability + CTA */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <Badge variant="subtle">Available</Badge>
+          <a href="/NANDAGOPAL-Resume.pdf" download style={{ textDecoration: 'none' }}>
+            <Button variant="outline" size="sm">
+              Resume
+            </Button>
+          </a>
           <Button variant="primary" size="sm">
             Hire Me
           </Button>
