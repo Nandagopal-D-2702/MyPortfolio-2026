@@ -117,6 +117,8 @@ function BlogList() {
                 activeFilter === category
                   ? 'var(--color-text-primary)'
                   : 'var(--color-border)',
+              appearance: 'none',
+              WebkitAppearance: 'none'
             }}
           >
             {category}
