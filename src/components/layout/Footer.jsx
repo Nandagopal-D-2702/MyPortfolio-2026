@@ -24,6 +24,9 @@ const SOCIAL_LINKS = [
   { label: 'Twitter', href: 'https://twitter.com' },
 ]
 
+const EMAIL = 'nandugopaldevraj.2702@gmail.com'
+const GMAIL_URL = `https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=Hello — Let's work together`
+
 const CURRENT_YEAR = new Date().getFullYear()
 
 function Footer() {
@@ -78,7 +81,7 @@ function Footer() {
           </Label>
 
           <a
-            href="nandugopaldevraj.2702@gmail.com"
+            href={GMAIL_URL}
             style={{
               fontFamily: 'var(--font-mono)',
               fontSize: '13px',
