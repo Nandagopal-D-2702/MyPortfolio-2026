@@ -28,8 +28,9 @@ function VlogGallery() {
   const rest = VLOGS.slice(1)
 
   return (
-    <section style={{ padding: '64px 48px' }}>
+    <section className='section-padding' style={{ padding: '64px 48px' }}>
       <motion.div
+        className='section-header'
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -81,6 +82,7 @@ function VlogGallery() {
           onClick={() => window.open(featured.youtubeUrl, '_blank')}
         >
           <div
+            className='vlogs-featured-grid'
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',

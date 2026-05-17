@@ -51,9 +51,10 @@ function BlogList() {
       : BLOG_POSTS.filter((post) => post.category === activeFilter)
 
   return (
-    <section style={{ padding: '64px 48px' }}>
+    <section className='section-paddding' style={{ padding: '64px 48px' }}>
       {/* Section Header */}
       <motion.div
+        className='section-header'
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -134,6 +135,7 @@ function BlogList() {
         initial="hidden"
         animate="show"
         key={activeFilter}
+        className='blog-grid'
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',

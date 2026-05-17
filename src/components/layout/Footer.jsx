@@ -37,6 +37,7 @@ function Footer() {
     >
       {/* Top section */}
       <div
+        className='footer-grid'
         style={{
           padding: '64px 48px 48px',
           display: 'grid',
@@ -48,6 +49,7 @@ function Footer() {
         {/* Left - name + tagline */}
         <div>
           <div
+            className='footer-headline'
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '48px',
@@ -164,6 +166,7 @@ function Footer() {
 
       {/* Bottom bar */}
       <div
+        className='footer-bottom'
         style={{
           borderTop: '0.5px solid rgba(250,250,247,0.06)',
           padding: '20px 48px',

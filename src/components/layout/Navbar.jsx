@@ -61,7 +61,10 @@ function Navbar() {
         </NavLink>
 
         {/* Center links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+        <div
+          className="nav-links-center"
+          style={{ display: 'flex', alignItems: 'center', gap: '32px' }}
+        >
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
@@ -85,9 +88,17 @@ function Navbar() {
         </div>
 
         {/* Right side - availability + CTA */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div
+          className="nav-right"
+          style={{ display: 'flex', alignItems: 'center', gap: '16px' }}
+        >
           <Badge variant="subtle">Available</Badge>
-          <a href="/NANDAGOPAL-Resume.pdf" download style={{ textDecoration: 'none' }}>
+          <a
+            href="/NANDAGOPAL-Resume.pdf"
+            download
+            className="nav-resume"
+            style={{ textDecoration: 'none' }}
+          >
             <Button variant="outline" size="sm">
               Resume
             </Button>

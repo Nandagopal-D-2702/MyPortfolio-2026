@@ -47,6 +47,7 @@ function Hero() {
     <section>
       {/* -- MAIN GRID --------------------------------------- */}
       <div
+        className="hero-section"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -56,6 +57,7 @@ function Hero() {
       >
         {/* LEFT COLUMN */}
         <motion.div
+          className="hero-left"
           variant={slideInLeft}
           initial="hidden"
           animate="show"
@@ -96,7 +98,12 @@ function Hero() {
               animate="show"
               transition={{ delay: 0.15 }}
             >
-              <Heading as="h1" size="5xl" style={{ marginBottom: '16px' }}>
+              <Heading
+                as="h1"
+                size="5xl"
+                className="hero-headline"
+                style={{ marginBottom: '16px' }}
+              >
                 I write <br />
                 code &{' '}
                 <Heading
@@ -128,7 +135,7 @@ function Hero() {
               documented - in writing and on camera.
             </Text>
 
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div className="hero-cta" style={{ display: 'flex', gap: '12px' }}>
               <Link to="/projects" style={{ textDecoration: 'none' }}>
                 <Button variant="primary" size="md">
                   View Projects
@@ -237,6 +244,7 @@ function Hero() {
 
           {/* Stats row with stagger*/}
           <motion.div
+            className="stats-row"
             variants={container}
             initial="hidden"
             animate="show"

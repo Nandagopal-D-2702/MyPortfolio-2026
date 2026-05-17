@@ -62,6 +62,7 @@ function Contact() {
 
       {/* Main contact grid */}
       <div
+        className='contact-grid'
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -80,6 +81,7 @@ function Contact() {
             Preferred contact
           </Label>
           <a
+            className='contact-email'
             href={GMAIL_URL}
             target='_blank'
             style={{
@@ -94,6 +96,8 @@ function Contact() {
               borderBottom: '1px solid var(--color-accent)',
               paddingBottom: '8px',
               transition: 'color 200ms ease',
+              wordBreak: 'break-all',
+              overflowWrap: 'break-word',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.color = 'var(--color-accent)'
@@ -104,7 +108,7 @@ function Contact() {
           >
             {EMAIL}
           </a>
-          <div style={{ display: 'flex', gap: '12px' }}>
+          <div className='contact-cta' style={{ display: 'flex', gap: '12px' }}>
             <a href={GMAIL_URL} target='_blank' style={{ textDecoration: 'none' }}>
               <Button variant="primary" size="md">
                 Send Email

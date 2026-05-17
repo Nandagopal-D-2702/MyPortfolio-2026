@@ -18,9 +18,10 @@ function ProjectGrid() {
   const rest = PROJECTS.filter((p) => !p.featured)
 
   return (
-    <section style={{ padding: '64px 48px' }}>
+    <section className='section-padding' style={{ padding: '64px 48px' }}>
       {/* Section header */}
       <motion.div
+        className='section-header'
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -65,6 +66,7 @@ function ProjectGrid() {
         >
           <Card variant="dark" hoverable style={{ marginBottom: '16px' }}>
             <div
+              className='projects-featured-grid'
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -166,6 +168,7 @@ function ProjectGrid() {
 
       {/* Rest of projects - 3 column grid */}
       <motion.div
+        className='projects-grid'
         variants={container}
         initial="hidden"
         whileInView="show"
