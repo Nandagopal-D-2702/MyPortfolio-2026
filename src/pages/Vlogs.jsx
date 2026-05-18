@@ -1,8 +1,15 @@
+// ============================================================
+// Vlogs.jsx
+// Full vlogs page — all episodes
+// ============================================================
+
+import { motion } from "framer-motion"
+
+
+
 function Vlogs(){
     return(
-        <main>
-            <p className="label-accent">Vlogs page</p>
-        </main>
+        <main></main>
     )
 }
 
