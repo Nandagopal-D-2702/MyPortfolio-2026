@@ -21,6 +21,12 @@ export const PROJECTS = [
     live: true,
     liveUrl: '#',
     githubUrl: '#',
+    // Add real screenshot URLs or use placeholder service
+    images: [
+      'https://placehold.co/600x400/1A1814/FAFAF7?text=Analytics+Dashboard',
+      'https://placehold.co/600x400/D04E2A/FAFAF7?text=Dashboard+View',
+      'https://placehold.co/600x400/2A1814/FAFAF7?text=Analytics+Charts',
+    ],
   },
   {
     id: 2,
@@ -35,6 +41,11 @@ export const PROJECTS = [
     live: true,
     liveUrl: '#',
     githubUrl: '#',
+    images: [
+      'https://placehold.co/600x400/1A1814/FAFAF7?text=Dev+Tracker',
+      'https://placehold.co/600x400/D04E2A/FAFAF7?text=Tracker+Stats',
+      'https://placehold.co/600x400/142A1A/FAFAF7?text=Daily+Goals',
+    ],
   },
   {
     id: 3,
@@ -49,6 +60,11 @@ export const PROJECTS = [
     live: false,
     liveUrl: '#',
     githubUrl: '#',
+    images: [
+      'https://placehold.co/600x400/1A1814/FAFAF7?text=Component+Kit',
+      'https://placehold.co/600x400/D04E2A/FAFAF7?text=UI+Components',
+      'https://placehold.co/600x400/1A1428/FAFAF7?text=Design+Tokens',
+    ],
   },
   {
     id: 4,
@@ -63,6 +79,11 @@ export const PROJECTS = [
     live: false,
     liveUrl: '#',
     githubUrl: '#',
+    images: [
+      'https://placehold.co/600x400/1A1814/FAFAF7?text=Portfolio+CMS',
+      'https://placehold.co/600x400/D04E2A/FAFAF7?text=CMS+Editor',
+      'https://placehold.co/600x400/281A14/FAFAF7?text=Live+Preview',
+    ],
   },
 ]
 
