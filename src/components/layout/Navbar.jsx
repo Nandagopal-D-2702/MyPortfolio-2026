@@ -15,8 +15,9 @@ import Button from '@/components/ui/Button'
 const NAV_LINKS = [
   { label: 'Work', to: '/projects' },
   { label: 'Experience', to: '/experience' },
+  { label: 'Certifications', to: '/certifications' },
   { label: 'Blog', to: '/blog' },
-  { label: 'Vlogs', to: '/vlogs' },
+  // { label: 'Vlogs', to: '/vlogs' }
 ]
 
 function Navbar() {

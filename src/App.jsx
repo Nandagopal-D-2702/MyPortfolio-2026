@@ -6,6 +6,8 @@ import Blog from '@/pages/Blog'
 import Vlogs from '@/pages/Vlogs'
 import Footer from './components/layout/Footer'
 import Experience from './features/experience/Experience'
+import CertificationsPage from './pages/CertificationsPage'
+
 
 function App() {
   return (
@@ -16,8 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/vlogs" element={<Vlogs />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
         </Routes>
       </div>
       <Footer />

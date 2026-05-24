@@ -196,3 +196,60 @@ export const EXPERIENCE = [
     tech: ['React', 'JavaScript', 'Axios', 'Jira', 'Agile'],
   },
 ]
+
+// -- CERTIFICATIONS ----------------------------------------------
+export const CERTIFICATIONS = [
+  {
+    id: 1,
+    title: 'Meta Frontend Developer',
+    issuer: 'Meta',
+    issuerShort: 'META',
+    date: 'Add your date',
+    credentialUrl: '#',
+    category: 'Certification',
+    color: '#0081FB',
+  },
+  {
+    id: 2,
+    title: 'Python Problem Solving',
+    issuer: 'HackerRank',
+    issuerShort: 'HR',
+    date: 'Add your date',
+    credentialUrl: '#',
+    category: 'Certification',
+    color: '#00EA64',
+  },
+]
+
+
+// -- ACHIVEMENTS ----------------------------------------------
+export const ACHIEVEMENTS = [
+  {
+    id: 1,
+    title: 'Zero Critical Bugs',
+    description: 'Delivered 10+ production releases with zero critical post-deployment bugs across enterprise clients.',
+    metric: '10+',
+    metricLabel: 'Releases',
+  },
+  {
+    id: 2,
+    title: 'Performance Optimization',
+    description: 'Reduced page load time by 25% through React memoization and lazy loading techniques.',
+    metric: '25%',
+    metricLabel: 'Faster',
+  },
+  {
+    id: 3,
+    title: 'Mentorship',
+    description: 'Mentored 2 junior developers, reducing onboarding time by 30% and improving code quality.',
+    metric: '30%',
+    metricLabel: 'Faster onboarding',
+  },
+  {
+    id: 4,
+    title: 'Agile Delivery',
+    description: 'Led 20+ user stories in Agile sprints achieving 95% on-time delivery for client milestones.',
+    metric: '95%',
+    metricLabel: 'On-time delivery',
+  },
+]

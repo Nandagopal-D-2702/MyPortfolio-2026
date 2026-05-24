@@ -1,5 +1,6 @@
 import Divider from '../components/ui/Divider'
 import BlogList from '../features/blog/BlogList'
+import Certifications from '../features/certifications/Certifications'
 import Contact from '../features/contact/Contact'
 import Experience from '../features/experience/Experience'
 import Hero from '../features/hero/Hero'
@@ -15,9 +16,10 @@ function Home() {
       <Divider />
       <Experience />
       <Divider />
+      <Certifications />
+      <Divider />
       <BlogList />
       <Divider />
-      <VlogGallery />
       <Contact />
     </main>
   )
