@@ -5,6 +5,7 @@ import Projects from '@/pages/Projects'
 import Blog from '@/pages/Blog'
 import Vlogs from '@/pages/Vlogs'
 import Footer from './components/layout/Footer'
+import Experience from './features/experience/Experience'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/vlogs" element={<Vlogs />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </div>
       <Footer />
@@ -24,4 +26,3 @@ function App() {
 }
 
 export default App
-

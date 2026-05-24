@@ -5,7 +5,6 @@
 // In a production app this would come from a CMS or API.
 // ============================================================
 
-
 // -- PROJECTS ------------------------------------------------
 export const PROJECTS = [
   {
@@ -87,7 +86,6 @@ export const PROJECTS = [
   },
 ]
 
-
 // -- BLOG POSTS ----------------------------------------------
 export const BLOG_POSTS = [
   {
@@ -132,7 +130,6 @@ export const BLOG_POSTS = [
   },
 ]
 
-
 // -- VLOGS ---------------------------------------------------
 export const VLOGS = [
   {
@@ -173,29 +170,29 @@ export const VLOGS = [
   },
 ]
 
-
 // -- EXPERIENCE ----------------------------------------------
 export const EXPERIENCE = [
   {
     id: 1,
-    role: 'Frontend Developer',
-    company: 'Your Company',
+    role: 'Software Engineer — Frontend',
+    company: 'Your Company Name',
     location: 'Bangalore, IN',
-    period: '2023 — Present',
-    description:
-      'Building production React applications, design systems and developer tooling for a fast-growing product team.',
-    tech: ['React', 'TypeScript', 'Node.js'],
+    period: '2021 — Present',
     current: true,
-  },
-  {
-    id: 2,
-    role: 'UI Developer',
-    company: 'Previous Company',
-    location: 'Bangalore, IN',
-    period: '2022 — 2023',
     description:
-      'Built and maintained component libraries, improved performance and led the migration from CSS modules to Tailwind.',
-    tech: ['React', 'Tailwind', 'JavaScript'],
-    current: false,
+      'Building production-grade React applications for enterprise clients across multiple domains.',
+    achievements: [
+      'Delivered 10+ client-facing production releases with zero critical post-deployment bugs',
+      'Resolved 50+ frontend defects in Jira, improving application stability for enterprise projects',
+      'Led end-to-end development of 20+ user stories in Agile sprints with 95% on-time delivery',
+      'Optimized React component rendering using memoization and lazy loading, reducing page load time by 25%',
+      'Integrated RESTful APIs with Axios, implementing error handling and data validation',
+      'Conducted cross-browser testing across Chrome, Firefox and Safari, resolving compatibility issues',
+      'Mentored 2 junior developers on React best practices, reducing onboarding time by 30%',
+      'Served as Resource Lead for multiple releases, coordinating frontend deliverables across sprint timelines',
+      'Worked across development, staging and production environments validating frontend behavior',
+      'Resolved production UI issues by analyzing logs and collaborating with backend teams',
+    ],
+    tech: ['React', 'JavaScript', 'Axios', 'Jira', 'Agile'],
   },
 ]
