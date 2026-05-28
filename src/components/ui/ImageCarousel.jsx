@@ -34,7 +34,7 @@ function ImageCarousel({ images = [], interval = 5000 }) {
   useEffect(() => {
     // Don't set up interval if only one image
 
-    if (ImageCarousel.length <= 1) return
+    if (images.length <= 1) return
 
     const timer = setInterval(() => {
       // Only advance if not paused

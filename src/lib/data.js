@@ -73,6 +73,25 @@ export const PROJECTS = [
       '/projects/dashboard/admin-dashboard-5.png',
     ],
   },
+  {
+    id: 4,
+    title: 'Home Page UI Practise',
+    subtitle: 'UI Layout Practise',
+    description:
+      'Practising to make UI home page design with React and Tailwind',
+    tech: ['React', 'JavaScript', 'TailwindCSS'],
+    category: 'Pintrest Ideas',
+    year: '2026',
+    featured: false,
+    live: false,
+    liveUrl: 'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
+    githubUrl:
+      'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
+    images: [
+      '/projects/uipractise/ui-layout-01.png',
+      '/projects/uipractise/ui-layout-02.png',
+    ],
+  },
 ]
 
 // -- BLOG POSTS ----------------------------------------------

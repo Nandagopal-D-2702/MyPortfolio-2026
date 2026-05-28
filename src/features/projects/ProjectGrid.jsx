@@ -4,6 +4,7 @@
 // Featured project takes full width, rest in 3 columns.
 // ============================================================
 
+import { Link } from 'react-router-dom'
 import { PROJECTS } from '@/lib/data'
 import { motion } from 'framer-motion'
 import { Heading, Text, Label } from '../../components/ui/Typography'
@@ -18,10 +19,10 @@ function ProjectGrid() {
   const rest = PROJECTS.filter((p) => !p.featured)
 
   return (
-    <section className='section-padding' style={{ padding: '64px 48px' }}>
+    <section className="section-padding" style={{ padding: '64px 48px' }}>
       {/* Section header */}
       <motion.div
-        className='section-header'
+        className="section-header"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -49,9 +50,11 @@ function ProjectGrid() {
             </Heading>
           </Heading>
         </div>
-        <Button variant="outline" size="sm">
-          View all work
-        </Button>
+        <Link to='/projects' style={{ textDecoration: 'none' }}>
+          <Button variant="outline" size="sm">
+            View all work
+          </Button>
+        </Link>
       </motion.div>
 
       <Divider style={{ marginBottom: '48px' }} />
@@ -66,7 +69,7 @@ function ProjectGrid() {
         >
           <Card variant="dark" hoverable style={{ marginBottom: '16px' }}>
             <div
-              className='projects-featured-grid'
+              className="projects-featured-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -109,6 +112,7 @@ function ProjectGrid() {
                     style={{
                       color: 'rgba(250,250,247,0.5)',
                       maxWidth: '320px',
+                      marginBottom: '20px',
                     }}
                   >
                     {featured.description}
@@ -168,7 +172,7 @@ function ProjectGrid() {
 
       {/* Rest of projects - 3 column grid */}
       <motion.div
-        className='projects-grid'
+        className="projects-grid"
         variants={container}
         initial="hidden"
         whileInView="show"

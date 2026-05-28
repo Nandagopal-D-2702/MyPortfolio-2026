@@ -173,7 +173,7 @@ function ProjectCard({ project }) {
           View Project →
         </Button>
         <Button variant="outline" size="sm">
-          GitHub
+          <a href={project.githubUrl} target='_blank'>GitHub</a>
         </Button>
       </Card.Footer>
     </Card>
