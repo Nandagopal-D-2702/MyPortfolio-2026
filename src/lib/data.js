@@ -9,79 +9,68 @@
 export const PROJECTS = [
   {
     id: 1,
-    title: 'Analytics Dashboard',
-    subtitle: 'Platform',
+    title: 'Sushi Store',
+    subtitle: 'Restaurant UI',
     description:
-      'A production SaaS product with real-time data visualisation, role-based access control and a custom component library.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
-    category: 'SaaS',
+      'A beautifully crafted Japanese restaurant website with editorial split layouts, food category filtering, menu sections and newsletter signup. Built while mastering HTML, CSS and JavaScript fundamentals.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    category: 'UI Design',
     year: '2024',
     featured: true,
-    live: true,
-    liveUrl: '#',
-    githubUrl: '#',
-    // Add real screenshot URLs or use placeholder service
+    live: false,
+    liveUrl: 'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
+    githubUrl:
+      'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
     images: [
-      'https://placehold.co/600x400/1A1814/FAFAF7?text=Analytics+Dashboard',
-      'https://placehold.co/600x400/D04E2A/FAFAF7?text=Dashboard+View',
-      'https://placehold.co/600x400/2A1814/FAFAF7?text=Analytics+Charts',
+      '/projects/sushi/sushi-1.png',
+      '/projects/sushi/sushi-2.png',
+      '/projects/sushi/sushi-3.png',
+      '/projects/sushi/sushi-4.png',
+      '/projects/sushi/sushi-5.png',
     ],
   },
   {
     id: 2,
-    title: 'Dev Tracker',
-    subtitle: 'Mobile App',
+    title: 'Nike Store',
+    subtitle: 'E-Commerce UI',
     description:
-      'A React Native productivity app for developers to track daily coding sessions, goals and streaks.',
-    tech: ['React Native', 'Firebase', 'Expo'],
-    category: 'Mobile',
+      'A production-style Nike e-commerce landing page featuring product grids, customer testimonials, special offers section and newsletter signup. Built specifically to master Tailwind CSS utility-first workflow.',
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    category: 'E-Commerce',
     year: '2024',
     featured: false,
-    live: true,
-    liveUrl: '#',
-    githubUrl: '#',
+    live: false,
+    liveUrl: 'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
+    githubUrl:
+      'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
     images: [
-      'https://placehold.co/600x400/1A1814/FAFAF7?text=Dev+Tracker',
-      'https://placehold.co/600x400/D04E2A/FAFAF7?text=Tracker+Stats',
-      'https://placehold.co/600x400/142A1A/FAFAF7?text=Daily+Goals',
+      '/projects/nike/nike-1.png',
+      '/projects/nike/nike-2.png',
+      '/projects/nike/nike-3.png',
+      '/projects/nike/nike-4.png',
+      '/projects/nike/nike-5.png',
     ],
   },
   {
     id: 3,
-    title: 'UI Component Kit',
-    subtitle: 'Open Source',
+    title: 'Analytics Dashboard',
+    subtitle: 'Admin Panel',
     description:
-      'A production-grade React component library with design tokens, accessibility support and full documentation.',
-    tech: ['React', 'TypeScript', 'Storybook'],
-    category: 'Open Source',
-    year: '2023',
+      'A fully functional analytics dashboard with Charts.js data visualisation, custom API data layer built in data.js, and a clean admin UI. Demonstrates real-world data handling and charting in React.',
+    tech: ['React', 'JavaScript', 'Charts.js'],
+    category: 'Dashboard',
+    year: '2024',
     featured: false,
     live: false,
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
+    githubUrl:
+      'https://github.com/Nandagopal-D-2702/Frontend_Projects_By_Nandu',
     images: [
-      'https://placehold.co/600x400/1A1814/FAFAF7?text=Component+Kit',
-      'https://placehold.co/600x400/D04E2A/FAFAF7?text=UI+Components',
-      'https://placehold.co/600x400/1A1428/FAFAF7?text=Design+Tokens',
-    ],
-  },
-  {
-    id: 4,
-    title: 'Portfolio CMS',
-    subtitle: 'Full Stack',
-    description:
-      'A headless CMS built specifically for developer portfolios with markdown support and live preview.',
-    tech: ['Next.js', 'Prisma', 'PostgreSQL'],
-    category: 'Full Stack',
-    year: '2023',
-    featured: false,
-    live: false,
-    liveUrl: '#',
-    githubUrl: '#',
-    images: [
-      'https://placehold.co/600x400/1A1814/FAFAF7?text=Portfolio+CMS',
-      'https://placehold.co/600x400/D04E2A/FAFAF7?text=CMS+Editor',
-      'https://placehold.co/600x400/281A14/FAFAF7?text=Live+Preview',
+      '/projects/dashboard/admin-dashboard-1.png',
+      '/projects/dashboard/admin-dashboard-2.png',
+      '/projects/dashboard/admin-dashboard-3.png',
+      '/projects/dashboard/admin-dashboard-4.png',
+      '/projects/dashboard/admin-dashboard-5.png',
     ],
   },
 ]
@@ -221,34 +210,37 @@ export const CERTIFICATIONS = [
   },
 ]
 
-
 // -- ACHIVEMENTS ----------------------------------------------
 export const ACHIEVEMENTS = [
   {
     id: 1,
     title: 'Zero Critical Bugs',
-    description: 'Delivered 10+ production releases with zero critical post-deployment bugs across enterprise clients.',
+    description:
+      'Delivered 10+ production releases with zero critical post-deployment bugs across enterprise clients.',
     metric: '10+',
     metricLabel: 'Releases',
   },
   {
     id: 2,
     title: 'Performance Optimization',
-    description: 'Reduced page load time by 25% through React memoization and lazy loading techniques.',
+    description:
+      'Reduced page load time by 25% through React memoization and lazy loading techniques.',
     metric: '25%',
     metricLabel: 'Faster',
   },
   {
     id: 3,
     title: 'Mentorship',
-    description: 'Mentored 2 junior developers, reducing onboarding time by 30% and improving code quality.',
+    description:
+      'Mentored 2 junior developers, reducing onboarding time by 30% and improving code quality.',
     metric: '30%',
     metricLabel: 'Faster onboarding',
   },
   {
     id: 4,
     title: 'Agile Delivery',
-    description: 'Led 20+ user stories in Agile sprints achieving 95% on-time delivery for client milestones.',
+    description:
+      'Led 20+ user stories in Agile sprints achieving 95% on-time delivery for client milestones.',
     metric: '95%',
     metricLabel: 'On-time delivery',
   },

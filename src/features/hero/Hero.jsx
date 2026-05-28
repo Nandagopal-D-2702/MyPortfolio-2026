@@ -207,22 +207,22 @@ function Hero() {
                 size="3xl"
                 style={{ color: '#FAFAF7', marginBottom: '20px' }}
               >
-                Analytics{' '}
+                Sushi{' '}
                 <Heading
                   as="span"
                   size="3xl"
                   italic
                   style={{ color: 'var(--color-accent)' }}
                 >
-                  Dashboard
+                  Store
                 </Heading>
                 <br />
-                Platform
+                Restaurant UI
               </Heading>
 
               {/* Tech tags */}
               <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                {['React', 'Node.js', 'PostgreSQL'].map((tech) => (
+                {['HTML', 'CSS', 'Javascript'].map((tech) => (
                   <span
                     key={tech}
                     style={{

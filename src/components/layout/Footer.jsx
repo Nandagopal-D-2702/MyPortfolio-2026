@@ -179,7 +179,7 @@ function Footer() {
         }}
       >
         <Label>
-            © {CURRENT_YEAR} - Your Name. All rights reserved.
+            © {CURRENT_YEAR} - Nandagopal D. All rights reserved.
         </Label>
         <Label>
             Built with React · Designed with intention
