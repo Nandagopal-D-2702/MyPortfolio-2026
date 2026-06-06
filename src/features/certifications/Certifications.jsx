@@ -75,6 +75,7 @@ function Certifications() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
+          className='certs-grid'
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
@@ -120,6 +121,7 @@ function Certifications() {
           variants={container}
           initial="hidden"
           whileInView="show"
+          className='achivements-grid'
           viewport={{ once: true, amount: 0.1 }}
           style={{
             display: 'grid',

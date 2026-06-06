@@ -161,4 +161,19 @@
   .nav-right{
     gap: 6px !important;
   }
+
+  .achivements-grid{
+    grid-template-columns: 1fr !important;
+  }
 }
+
+
+/* --------------- Certifications -------------- */
+.certs-grid{
+  grid-template-columns: 1fr !important;
+}
+
+.achivements-grid{
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
